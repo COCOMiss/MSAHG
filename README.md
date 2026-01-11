@@ -6,7 +6,7 @@ MSAHG is a novel framework designed to address the oversight of mobility variati
 
 * **Model Framework**
 
-![MSAHG Overall Framework](model.pdf)
+![MSAHG Overall Framework](model_01.png)
 
 
 ## Core Contributions
