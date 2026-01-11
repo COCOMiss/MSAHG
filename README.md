@@ -1,14 +1,10 @@
-Here is the full **README.md** in English, following the layout of STHGCN and incorporating your updated dataset statistics.
-
----
-
 # MSAHG: Multifaceted Scenario-Aware Hypergraph Learning
 
 This repository provides the official implementation of the paper **Multifaceted Scenario-Aware Hypergraph Learning for Next POI Recommendation**, accepted by **AAAI 2026**.
 
 MSAHG is a novel framework designed to address the oversight of mobility variations across distinct contextual scenarios (e.g., tourists vs. locals, weekdays vs. weekends) in Next POI recommendation. It adopts a **scenario-splitting paradigm** to capture scenario-specific features through disentangled sub-hypergraphs and introduces an **Adaptive Parameter Splitting (APS)** mechanism to resolve optimization conflicts between scenarios.
 
-* **Disentangled Sub-hypergraphs**
+
 * **Model Framework**
 
 ![MSAHG Overall Framework](model.pdf)
@@ -17,7 +13,7 @@ MSAHG is a novel framework designed to address the oversight of mobility variati
 
 * **Multifaceted Scenario Definition**: We define composite scenarios across three orthogonal dimensions: user type (local/tourist), temporal context (weekday/weekend), and spatial area (urban/suburban).
 * **Disentangled Sub-hypergraph Construction**: We construct scenario-specific sub-hypergraphs (Collaborative, Temporal, Geographic, and Transition views) to capture fine-grained mobility semantics.
-* **Adaptive Parameter Splitting (APS)**: A dynamic mechanism that monitors gradient similarity across scenarios and adaptively splits conflicting parameters, balancing scenario-specific adaptation with global generalization.
+* **Adaptive Parameter Splitting**: A dynamic mechanism that monitors gradient similarity across scenarios and adaptively splits conflicting parameters, balancing scenario-specific adaptation with global generalization.
 
 ---
 
@@ -25,7 +21,7 @@ MSAHG is a novel framework designed to address the oversight of mobility variati
 
 1. **Clone the repository**:
 ```shell
-git clone https://github.com/YourUsername/MSAHG.git
+git clone https://github.com/COCOMiss/MSAHG.git
 cd MSAHG
 
 ```
@@ -36,7 +32,7 @@ The repository has several important dependencies:
 * Python 3.12+
 * PyTorch 2.4.1+
 * CUDA 12.1+
-* Recommended Hardware: NVIDIA A40 (24GB+ VRAM) or equivalent.
+
 
 
 3. **Install dependencies**:
@@ -84,7 +80,7 @@ python main.py --dataset nyc --batch_size 200 --lr 0.001 --split_epoch 20
 ```
 
 * `--dataset`: Choose from `nyc`, `tky`, or `gowalla`.
-* `--split_epoch`: The epoch when the APS mechanism starts detecting conflicts (suggested: 20 for NYC/Gowalla, 30 for TKY).
+* `--split_epoch`: The epoch when the Adaptive Parameter Splitting mechanism starts detecting conflicts (suggested: 20 for NYC/Gowalla, 30 for TKY).
 
 ### Evaluation
 
@@ -118,13 +114,3 @@ If you find our work or code useful for your research, please cite our paper:
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
   year={2026}
 }
-
-```
-
-## Acknowledgements
-
-The implementation of hypergraph convolution is partly inspired by [STHGCN](https://github.com/ant-research/Spatio-Temporal-Hypergraph-Model). We thank the authors for their contributions to the community.
-
----
-
-**Next step**: I can help you write a `requirements.txt` based on the versions listed above, or help you draft the `argparse` configuration for your `main.py` if needed.
