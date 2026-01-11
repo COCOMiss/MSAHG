@@ -6,6 +6,9 @@ MSAHG is a novel framework designed to address the oversight of mobility variati
 
 * **Model Framework**
 
+![MSAHG Overall Framework](model.pdf)
+
+
 ## Core Contributions
 
 * **Multifaceted Scenario Definition**: We define composite scenarios across three orthogonal dimensions: user type (local/tourist), temporal context (weekday/weekend), and spatial area (urban/suburban).
